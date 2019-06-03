@@ -124,6 +124,7 @@
 	    <groupId>org.springframework</groupId>
 	    <artifactId>spring-webmvc-portlet</artifactId>
 	  </dependency>
+	  	  
 	
 	  <dependency>
 	    <groupId>org.apache.tiles</groupId>
@@ -136,7 +137,7 @@
 	    <artifactId>tiles-jsp</artifactId>
 	    <version>${apache.tiles.version}</version>
 	  </dependency>
-	
+		
 	  <dependency>
 	    <groupId>org.slf4j</groupId>
 	    <artifactId>slf4j-log4j12</artifactId>
@@ -177,6 +178,18 @@
             <groupId>com.google.apis</groupId>
             <artifactId>google-api-services-plus</artifactId>
             <version>v1-rev453-1.22.0</version>
+        </dependency>
+                <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>6.0.4</version>
+        </dependency>
+        <!-- SQLServer JDBC driver (JTDS) -->
+        <!-- http://mvnrepository.com/artifact/net.sourceforge.jtds/jtds -->
+        <dependency>
+            <groupId>net.sourceforge.jtds</groupId>
+            <artifactId>jtds</artifactId>
+            <version>1.3.1</version>
         </dependency>
 
 	</dependencies>
