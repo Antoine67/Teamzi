@@ -20,7 +20,7 @@ public class IndexController {
     private TeamziUserDAO userDAO;
 	
 	@RequestMapping(value="/index", method = RequestMethod.GET)
-	public String index(Model model) {
+	public String indexGet(Model model) {
 		
 		//departmentDAO.insertDepartment("HR", "Chicago");
 	    //departmentDAO.insertDepartment("INV", "Hanoi");

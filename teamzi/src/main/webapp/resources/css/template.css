@@ -1,0 +1,33 @@
+
+
+.main-left {
+	flex-grow: 1;
+	width: 50%;
+	height:85vh;
+	background-color: red;
+}
+
+.main-right{
+	flex-grow: 1;
+	padding: 1vw;
+	height:85vh;
+	background-color: green;
+}
+
+
+.main {
+	width:100%;
+	display: flex;
+	text-align: center;
+}
+
+
+
+
+/* Media queries */
+
+@media screen and (max-width: 640px) {
+  .main-right {
+    display:none;
+  }
+}

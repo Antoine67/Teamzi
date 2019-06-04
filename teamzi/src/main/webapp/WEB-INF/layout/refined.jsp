@@ -7,22 +7,31 @@
 <!DOCTYPE html>
 <html>
 
+<%
+
+//Requested page (example : "login" or "index")
+String uri = request.getAttribute("javax.servlet.forward.request_uri").toString();
+String pageName = uri.substring(uri.lastIndexOf("/")+1);
+
+boolean logged_in = false;
+if (session.getAttribute("userName") != null) { logged_in = true;}
+%>
+
 <head>
 	<title><tiles:getAsString name="title"></tiles:getAsString></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="resources/css/header.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/<% out.print(pageName); %>.css">
 </head>
 
-<%
-boolean logged_in = false;
-if (session.getAttribute("userName") != null) { logged_in = true;}
-%>
+
 
 <header>
 	<nav class="navbar navbar-default" id="navigation-purple">
         <div class="container" style="width:100%">
+        	   	<a class="back" href="/">←</a>
         </div>
     </nav>
 </header>

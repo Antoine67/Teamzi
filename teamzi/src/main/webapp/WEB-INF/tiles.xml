@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE tiles-definitions PUBLIC
        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
@@ -18,4 +18,25 @@
     <put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
     <put-attribute name="current" value="login" />
   </definition>
+  
+  <definition name="profile" extends="common">
+    <put-attribute name="title" value="Teamzi" />
+    <put-attribute name="body" value="/WEB-INF/jsp/profile.jsp" />
+    <put-attribute name="current" value="profile" />
+  </definition>
+  
+  <definition name="document" extends="common">
+    <put-attribute name="title" value="Teamzi" />
+    <put-attribute name="body" value="/WEB-INF/jsp/document_main.jsp" />
+    <put-attribute name="left_sidebar" value="/WEB-INF/jsp/document_left_sidebar.jsp" />
+    <put-attribute name="right_sidebar" value="/WEB-INF/includes/document_right_sidebar.jsp" />
+    <put-attribute name="current" value="document" />
+  </definition>
+  
+  <definition name="template" extends="common">
+    <put-attribute name="title" value="Teamzi" />
+    <put-attribute name="body" value="/WEB-INF/jsp/template.jsp" />
+    <put-attribute name="current" value="template" />
+  </definition>
+  
 </tiles-definitions>

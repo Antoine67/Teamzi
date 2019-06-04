@@ -32,7 +32,7 @@ public class LoginController{
 	    private TeamziUserDAO userDAO;
 		
 		@RequestMapping(value = "/login", method = RequestMethod.GET)
-	    public String login() {
+	    public String loginGet() {
 			// Name of a definition in WEB-INF/tiles.xml
 			return "login";
 		}
@@ -48,16 +48,16 @@ public class LoginController{
 	            String name = (String) payLoad.get("name");
 	            String email = payLoad.getEmail();
 	            String picture = (String) payLoad.get("picture");
-	            
-	            System.out.println("User name: " + name);
-	            System.out.println("User email: LoginController" + email);
 
 	            HttpSession session = req.getSession(true);
+	            
+	            
+	      
 	            session.setAttribute("userName", name);
 	            session.setAttribute("userEmail", email);
 	            session.setAttribute("userPicture", picture);
 	            
-	            session.setAttribute("codeMessage", "connexion.success");
+	            session.setAttribute("success", "connection.success");
 	           
 	            if (userDAO.findUser(email) != null) { //If user's email already in DB
 	            	
@@ -66,7 +66,7 @@ public class LoginController{
 	            }
 	            
 	            
-	            logger.info("Connexion : "+name+" "+email);
+	            logger.info("Connection : "+name+" "+email);
 	            return new RedirectView("/"); //Redirect on home page
 	        } catch (Exception e) {
 	            throw new RuntimeException(e);

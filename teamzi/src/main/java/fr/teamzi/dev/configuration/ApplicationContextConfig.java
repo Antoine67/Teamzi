@@ -33,10 +33,10 @@ public class ApplicationContextConfig {
     @Bean(name = "viewResolver")
     public ViewResolver getViewResolver() {
         UrlBasedViewResolver viewResolver = new UrlBasedViewResolver();
+        
  
         // TilesView 3
         viewResolver.setViewClass(TilesView.class);
- 
         return viewResolver;
     }
  

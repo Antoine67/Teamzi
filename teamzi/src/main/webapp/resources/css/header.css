@@ -1,11 +1,14 @@
 
-.login-button {
-	float: right;
-	margin-top: 19px;
-	border-radius: 75px;
-	border: solid 1px grey;
-	padding: 10px;
-	color: grey;
+.back {
+	font-size:30px;
+    float: left;
+    color: white;
+    text-decoration: none;
+}
+
+.back:hover {
+	 color: white;
+	 text-decoration: none;
 }
 
 

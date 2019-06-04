@@ -1,0 +1,22 @@
+.connection-main-bloc {
+	text-align: center;
+	padding:10px;
+	margin:10px;
+	border-radius: 3px;
+	border: 1px solid black;
+	
+}
+
+#google-signin{
+  width: 100%;
+}
+
+#google-signin > div{
+  margin: 0 auto;
+}
+
+
+span[id^=not_signed_]:before {
+  content: 'Connexion avec Google';
+  padding-right:20px;
+}
