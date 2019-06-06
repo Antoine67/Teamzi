@@ -3,6 +3,7 @@
 .main {
 	position: relative;
 	height: 100%;
+	margin-bottom:50px;
 }
 
 body, html {
@@ -22,7 +23,7 @@ body, html {
 	 min-width:200px;
 	 flex-grow:0;
 	 height: 100%;
-	 max-height:100%;
+	 max-height:500px;
 	 
 }
 
@@ -73,13 +74,15 @@ body, html {
 
 
 .document-saving {
-	position: relative;
+	position: fixed;
 	bottom:0;
 	right:0;
 	left:0;
 	width:100%;
 	text-align: center;
 	border-top:1px solid grey;
+	height:50px;
+	padding:1px;
 	
 }
 

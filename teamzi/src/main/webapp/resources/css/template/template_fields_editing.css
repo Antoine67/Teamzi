@@ -3,8 +3,26 @@
 	background-color: white;
 	height: 100%;
 	width: 100%;
+}
+
+.left-field-editing {
+}
 
 
+.right-field-editing {
+}
+
+.left-field-editing, .right-field-editing {
+	margin: 0;
+	padding: 10px;
+	width:50%;
+}
+
+
+.up-static {
+	top: 0;
+	left:0;
+	width:100%;
 }
 
 /* ------ End fields editing content ------ */

@@ -14,17 +14,14 @@
 <div class="main">
 	<div class="tab">
 	  	<button class="tablinks" onclick="openTab(event, 'formatting')"><spring:message code="template.formatting"/></button>
-	  	<button class="tablinks" onclick="openTab(event, 'fields')"><spring:message code="template.fields"/></button>
+	  	<button id="defaut-tab" class="tablinks" onclick="openTab(event, 'fields')"><spring:message code="template.fields"/></button>
 	  	<button class="tablinks" onclick="openTab(event, 'options')"><spring:message code="template.options"/></button>
 	  	<button class="tablinks" onclick="openTab(event, 'saving')"><spring:message code="template.savingExport"/></button>
 	</div>
 
 	<!-- First tab : formatting part -->
 	<div id="formatting" class="tabcontent">
-	  	<div id="template-content">
-	  		<%@include file="../includes/template_formatting_tab.jsp" %>
-	  	</div>
-	  
+		<%@include file="../includes/template_formatting_tab.jsp" %>
 	</div>
 	<!-- End first tab -->
 	

@@ -80,7 +80,7 @@ public class TemplateDAO extends JdbcDaoSupport {
 	public void updateTemplate(int templateId, String data) {
 		String sql = "UPDATE Template " + 
 				"SET data = ? " + 
-				"WHERE documentId = ?";
+				"WHERE templateId = ?";
 		Object[] params = new Object[] { data, templateId };
 		this.getJdbcTemplate().update(sql, params);
 	}

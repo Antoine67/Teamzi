@@ -17,11 +17,11 @@
 	</c:if>
 
 	<c:if test = "${templates ne null && templates.size() > 0}">
+		<ol>
 		<c:forEach var="temp" items="${templates}" varStatus="status">
-            <tr>
-                  <td><a href="${temp.getRelativeUrl()}">${temp.getTemplateName()}</a></td>     
-        	</tr>
-		</c:forEach>     
+        	<li><a href="${temp.getRelativeUrl()}">${temp.getTemplateName()}</a></li>     
+		</c:forEach>  
+		</ol>   
 	</c:if>
 	
 	

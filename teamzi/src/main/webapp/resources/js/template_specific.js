@@ -1,3 +1,9 @@
+
+$( document ).ready(function() {
+    $("#defaut-tab").addClass("active");
+    $('#fields').css("display","block");
+});
+
 function openTab(evt, tabId) {
   //Hide all
   $( ".tabcontent" ).css("display","none");
@@ -10,12 +16,15 @@ function openTab(evt, tabId) {
 
 
 function saveAsDraft(div) {
-var data = $("#"+div).text();
+var data = $("#"+div).html();
+var tempId = getRelativeUrl(window.location.href ).split('-')[0];
+
+
 	
 	$.ajax({
 		url : '/template',
 		type : 'POST',
-		data : {tempId: 'tempId', content: data , aim : "save"},
+		data : {tempId: tempId, content: data , aim : "save"},
 		success: function(data) {
 			console.log("success");
 		},
@@ -26,6 +35,9 @@ var data = $("#"+div).text();
 }
 
 function finalizeDoc(div) {
-	
+
 }
 
+function getRelativeUrl(url){
+    return url.split('/').pop()
+}

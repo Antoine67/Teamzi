@@ -6,7 +6,7 @@
     
 
 <link rel="stylesheet" type="text/css" href="/resources/css/document_left_sidebar.css">
- 	<div class="container">
+ 	<div class="container" style="height: 100%;">
 		<div class="panel panel-default">
             <div class="panel-heading top-bar">
                 <div class="col-md-8 col-xs-8">

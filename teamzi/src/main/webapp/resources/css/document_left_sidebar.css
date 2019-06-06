@@ -11,8 +11,8 @@
   background: #e5e5e5;
   margin: 0;
   padding: 0 10px 10px;
-  max-height:300px;
   overflow-x:hidden;
+  height: calc(100% - 90px);
   
 }
 .top-bar {

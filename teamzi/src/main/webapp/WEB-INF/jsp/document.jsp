@@ -11,9 +11,9 @@
 	</c:if>
 
 	<c:if test = "${documents ne null && documents.size() > 0}">
+		<ol>
 		<c:forEach var="doc" items="${documents}" varStatus="status">
-            <tr>
-                  <td><a href="${doc.getRelativeUrl()}">${doc.getDocumentName()}</a></td>     
-        	</tr>
-		</c:forEach>     
+        	<li><a href="${doc.getRelativeUrl()}">${doc.getDocumentName()}</a></li>     
+		</c:forEach> 
+		</ol>    
 	</c:if>

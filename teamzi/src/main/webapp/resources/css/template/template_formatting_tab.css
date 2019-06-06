@@ -2,11 +2,16 @@
 
 #template-content {
 	background-color: white;
+	display: inline-block;
 	padding: 10px;
-	height: 100%;
-	width: 100%;
+	width: 1100px;
+	min-height: 800px;
 	margin: 20px;
 	padding: 10px;
+	border: 1px solid black;
+	-webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
 }
 
 .template-content textarea {
