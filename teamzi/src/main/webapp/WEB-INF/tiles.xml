@@ -25,12 +25,20 @@
     <put-attribute name="current" value="profile" />
   </definition>
   
+  
   <definition name="document" extends="common">
     <put-attribute name="title" value="Teamzi" />
-    <put-attribute name="body" value="/WEB-INF/jsp/document_main.jsp" />
+    <put-attribute name="body" value="/WEB-INF/jsp/document.jsp" />
+    <put-attribute name="current" value="document" />
+  </definition>
+  
+  
+  <definition name="document_specific" extends="common">
+    <put-attribute name="title" value="Teamzi" />
+    <put-attribute name="body" value="/WEB-INF/jsp/document_specific.jsp" />
     <put-attribute name="left_sidebar" value="/WEB-INF/jsp/document_left_sidebar.jsp" />
     <put-attribute name="right_sidebar" value="/WEB-INF/includes/document_right_sidebar.jsp" />
-    <put-attribute name="current" value="document" />
+    <put-attribute name="current" value="document-specific" />
   </definition>
   
   <definition name="template" extends="common">
@@ -38,5 +46,19 @@
     <put-attribute name="body" value="/WEB-INF/jsp/template.jsp" />
     <put-attribute name="current" value="template" />
   </definition>
+  
+  <definition name="template_specific" extends="common">
+    <put-attribute name="title" value="Teamzi" />
+    <put-attribute name="body" value="/WEB-INF/jsp/template_specific.jsp" />
+    <put-attribute name="current" value="template_specific" />
+  </definition>
+  
+  
+  <definition name="errorMsg" extends="common">
+    <put-attribute name="title" value="Teamzi" />
+    <put-attribute name="body" value="/WEB-INF/jsp/errorPage.jsp" />
+    <put-attribute name="current" value="errorMsg" />
+  </definition>
+  
   
 </tiles-definitions>

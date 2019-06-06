@@ -1,3 +1,18 @@
+.login-button {
+	float: right;
+	margin-top: 10px;
+	border-radius: 4px;
+	border: solid 1px white;
+	padding: 10px;
+	color: white;
+}
+
+.login-button:hover {
+	transition: all 0.4s ease 0s;
+	border: solid 1px #62e251;
+	color: #62e251;
+	text-decoration: none;
+}
 
 .back {
 	font-size:30px;
@@ -26,7 +41,7 @@
 
 #navigation-purple .nav > li {
     border-bottom: 2px solid transparent;
-    margin-bottom: 34px;
+    margin-bottom: 5px;
 }
 
 #navigation-purple .nav > li:hover {
@@ -48,13 +63,13 @@
 }
 
 #navigation-purple .navbar-collapse {
-    padding-top: 35px;
+    padding-top: 10px;
 }
 
 #navigation-purple .avatar {
-    height: 80px;
+    height: 50px;
     float: right;
-    margin-top: 19px;
+    margin-top: 9px;
 }
 
 #navigation-purple .icon-bar {
@@ -75,6 +90,10 @@
 
 @media screen and (max-width: 767px) {
 
+	.login-button {
+		margin-top:27px;
+	}
+	
 	.navbar-header {
 		height:96px;
 	}

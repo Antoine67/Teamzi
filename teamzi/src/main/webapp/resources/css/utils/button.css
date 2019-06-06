@@ -1,0 +1,55 @@
+/* Not buttons */
+.alert {
+	margin : 3px 0;
+	border-radius: 0;
+}
+
+
+/* Colors for .btn and .btn-two */
+.blue {background-color: #7fb1bf;}
+.light-green {background-color: #9abf7f;}
+.green {background-color: #73e244;}
+.red {background-color: #fa5a5a;}
+.purple {background-color: #cb99c5;}
+.cyan {background-color: #7fccde;}
+.yellow {background-color: #f0d264;}
+
+.button_1 {
+	color: #fff !important;
+	
+	background: #ed3330;
+	padding: 15px;
+	border-radius: 5px;
+	display: inline-block;
+	border: none;
+}
+
+.button_1:hover {
+	background: #434343;
+	letter-spacing: 1px;
+	-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+	-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+	box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+	transition: all 0.4s ease 0s;
+}
+
+
+.button_2 {
+	position: relative;
+    display: inline-block;
+    font-size: 15px;
+    padding: 5px 20px;
+    color: white;
+    margin: 20px 10px 10px;
+    border-radius: 6px;
+    text-align: center;
+    transition: top .01s linear;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+}
+
+
+
+
+
+
+

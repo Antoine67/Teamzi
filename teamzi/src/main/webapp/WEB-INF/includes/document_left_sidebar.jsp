@@ -5,7 +5,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     
 
-        <link rel="stylesheet" type="text/css" href="resources/css/document_left_sidebar.css">
+<link rel="stylesheet" type="text/css" href="/resources/css/document_left_sidebar.css">
  	<div class="container">
 		<div class="panel panel-default">
             <div class="panel-heading top-bar">

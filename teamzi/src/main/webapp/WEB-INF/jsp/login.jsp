@@ -21,44 +21,13 @@
 <body>
 <div class="connection-main-bloc">
 	<h2><spring:message code="connection.label"/></h2>
-	<br>
-
+	<br/>
 	<div id="google-signin" > </div>
 </div>  
   
      
    
-   <script>
-    function onSuccess(googleUser) {
-        var profile = googleUser.getBasicProfile();
-
-        var redirectUrl = 'login';
-
-        //using jquery to post data dynamically
-        var form = $('<form hidden action="' + redirectUrl + '" method="post">' +
-                         '<input type="text" name="id_token" value="' +
-                          googleUser.getAuthResponse().id_token + '" />' +
-                                                           '</form>');
-        $('#success-conn').remove();  
-        $('body').append("<div id='success-conn' class='alert alert-success'>Connexion en cours...</div>");
-        $('body').append(form);
-        form.submit();
-    }
-    function onFailure(error) {
-      console.log(error);
-    }
-    function renderButton() {
-      gapi.signin2.render('google-signin', {
-        'scope': 'profile email',
-        'width': 240,
-        'height': 50,
-        'longtitle': true,
-        'theme': 'light',
-        'onsuccess': onSuccess,
-        'onfailure': onFailure
-      });
-    }
-  </script>
+   <script src="resources/js/login.js"></script>
    
    
    

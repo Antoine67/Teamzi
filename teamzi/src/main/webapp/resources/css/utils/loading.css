@@ -1,0 +1,20 @@
+#loading {
+	background:url(/resources/img/loading-gif.gif) no-repeat center center;
+	height: 300px;
+	width: 300px;
+	position: fixed;
+	top:calc(50% - 150px);
+	left:calc(50% - 150px);
+	z-index: 500;
+}
+
+#loading-transparant-bg {
+	position: fixed;
+	top:0;
+	right:0;
+	width:100vw;
+	height:100vh;
+	opacity:0.5;
+	z-index: 300;
+	background-color: white;
+}

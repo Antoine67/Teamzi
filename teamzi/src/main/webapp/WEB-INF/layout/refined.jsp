@@ -23,10 +23,11 @@ if (session.getAttribute("userName") != null) { logged_in = true;}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="resources/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/resources/css/utils/loading.css">
 	<link rel="stylesheet" type="text/css" href="resources/css/<% out.print(pageName); %>.css">
 </head>
 
-
+<script src="resources/js/utils/loading.js"></script>
 
 <header>
 	<nav class="navbar navbar-default" id="navigation-purple">

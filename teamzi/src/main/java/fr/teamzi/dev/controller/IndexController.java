@@ -8,9 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import fr.teamzi.dev.dao.DepartmentDAO;
 import fr.teamzi.dev.dao.TeamziUserDAO;
-import fr.teamzi.dev.model.Department;
 import fr.teamzi.dev.model.TeamziUser;
 
 @Controller

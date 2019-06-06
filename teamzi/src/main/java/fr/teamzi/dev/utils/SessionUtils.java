@@ -16,6 +16,10 @@ public class SessionUtils {
 	@Autowired
     private TeamziUserDAO userDAO;
 	
+	/**
+	 * Logout the connected user
+	 * @param request
+	 */
 	public static void logout(HttpServletRequest request) {
 		HttpSession session = request.getSession(false);
 		if(session != null) {
@@ -24,5 +28,34 @@ public class SessionUtils {
 			session.invalidate();
 			logger.info("Log out : "+name+" "+email);
 		}
+	}
+	
+	/**
+	 * Is a user currently connected ?
+	 * @param session
+	 * @return true if user connected, false if not
+	 */
+	public static boolean userConnected(HttpSession session) {
+		
+		return session.getAttribute("userId") != null ? true : false;
+	}
+	
+	
+	/**
+	 * Check if user is connected, if not log that an attempt of connection has been made from the request's IP
+	 * @param session current session
+	 * @param request HTTP Post request made
+	 * @param logger use to log request's IP if necessary
+	 * @return true if user connected, false if not
+	 */
+	public static boolean userConnectedPostData(HttpSession session, HttpServletRequest req, Logger logger) {
+		if(session.getAttribute("userId") == null ) {
+		    String ipAddress = req.getHeader("X-FORWARDED-FOR");  
+		       if (ipAddress == null) {  
+		         ipAddress = req.getRemoteAddr();  
+		   }
+		   logger.error("Post data without login from "+ipAddress);
+		   return false;
+		}else return true;
 	}
 }

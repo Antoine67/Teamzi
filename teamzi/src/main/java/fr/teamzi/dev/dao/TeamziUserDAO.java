@@ -6,12 +6,12 @@ import javax.sql.DataSource;
  
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import fr.teamzi.dev.mapper.TeamziUserMapper;
-import fr.teamzi.dev.model.Department;
 import fr.teamzi.dev.model.TeamziUser;
  
 @Repository
@@ -41,8 +41,9 @@ public class TeamziUserDAO extends JdbcDaoSupport {
         Object[] params = new Object[] { userId };
          
         TeamziUserMapper mapper = new TeamziUserMapper();
- 
-        TeamziUser usr = this.getJdbcTemplate().queryForObject(sql, params, mapper);
+        TeamziUser usr;
+        try { usr = this.getJdbcTemplate().queryForObject(sql, params, mapper); }
+        catch(EmptyResultDataAccessException e) { return null;}
         return usr;
     }
     
@@ -53,19 +54,21 @@ public class TeamziUserDAO extends JdbcDaoSupport {
         Object[] params = new Object[] { email };
          
         TeamziUserMapper mapper = new TeamziUserMapper();
- 
-        TeamziUser usr = this.getJdbcTemplate().queryForObject(sql, params, mapper);
+        TeamziUser usr;
+        try { usr = this.getJdbcTemplate().queryForObject(sql, params, mapper);}
+        catch(EmptyResultDataAccessException e) { return null;}
         return usr;
 	}
     
     
  
-    public void addUser(String userName, String userEmail) {
+    public Integer addUser(String userName, String userEmail) {
         String sql = "Insert into TeamziUser (userId,userName,userEmail) "//
                 + " values (?,?,?) ";
         int userId = this.getNextId() + 1;
         Object[] params = new Object[] { userId, userName, userEmail };
         this.getJdbcTemplate().update(sql, params);
+        return userId;
     }
 
 	public List<TeamziUser> getUsers() {

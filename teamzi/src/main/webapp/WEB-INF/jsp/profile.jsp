@@ -3,6 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 
+
 <div class="bloc-1">
 	<table class="table-1">
 		<tr>
@@ -43,9 +44,13 @@
 
 <div class="bloc-1">
 	<form method="POST" class="center">
-		<button type="submit" class="button_1"><spring:message code="connection.logout"/></button>
+		<button onclick="logOut()" type="submit" class="button_1"><spring:message code="connection.logout"/></button>
 	</form>
 </div>
+
+<script src="/resources/js/profile.js"></script>
+<script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+
 
 
  

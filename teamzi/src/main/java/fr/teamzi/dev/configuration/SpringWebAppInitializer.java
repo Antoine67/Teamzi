@@ -22,7 +22,7 @@ public class SpringWebAppInitializer implements WebApplicationInitializer {
         dispatcher.setLoadOnStartup(1);
         dispatcher.addMapping("/");
  
-        // UtF8 Charactor Filter.
+        // UtF8 Character Filter.
         FilterRegistration.Dynamic fr = servletContext.addFilter("encodingFilter", CharacterEncodingFilter.class);
  
         fr.setInitParameter("encoding", "UTF-8");
